@@ -1,0 +1,28 @@
+name: EnderChestPet
+version: 1.0.0
+description: Ender chest is living!
+author: JanMaki
+website: https://jnmk.site/
+main: site.jnmk.janmaki.ender_chest_pet.EnderChestPet
+api-version: 1.13
+
+commands:
+  enderchestpet:
+    aliases:
+      - ecp
+    usage: "Usage: /ecp [call / reload]"
+    description: this plugin commands.
+
+permissions:
+  ecp.*:
+    description: All perm.
+    default: op
+  ecp.reload:
+    description: Use reload command perm.
+    default: false
+  ecp.create:
+    description: Create pet perm.
+    default: true
+  ecp.call:
+    description: Use call command perm.
+    default: true
