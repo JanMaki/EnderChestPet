@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerInteractAtEntityEvent;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Open_CloseChestListener implements Listener {
+public class Open_ClosePetChestListener implements Listener {
 
     private Set<Player> set = new HashSet<>();
 

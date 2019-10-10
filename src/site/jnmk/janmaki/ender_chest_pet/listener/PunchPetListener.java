@@ -15,10 +15,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import site.jnmk.janmaki.ender_chest_pet.EnderChestPet;
 
-public class PunchChestListener implements Listener {
+public class PunchPetListener implements Listener {
     private EnderChestPet enderChestPet;
 
-    public PunchChestListener(EnderChestPet enderChestPet){
+    public PunchPetListener(EnderChestPet enderChestPet){
         this.enderChestPet = enderChestPet;
     }
 

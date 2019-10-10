@@ -23,8 +23,8 @@ public class EnderChestPet extends JavaPlugin {
         core = new PetCore(this);
         PluginManager plManager = Bukkit.getPluginManager();
         plManager.registerEvents(new ClickEnderChestListener(this),this);
-        plManager.registerEvents(new Open_CloseChestListener(),this);
-        plManager.registerEvents(new PunchChestListener(this),this);
+        plManager.registerEvents(new Open_ClosePetChestListener(),this);
+        plManager.registerEvents(new PunchPetListener(this),this);
         plManager.registerEvents(new ClickMenuListener(this),this);
         plManager.registerEvents(new MenuCloseListener(),this);
     }
