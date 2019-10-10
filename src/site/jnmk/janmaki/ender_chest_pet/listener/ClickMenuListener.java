@@ -90,7 +90,8 @@ public class ClickMenuListener implements Listener {
         for (int i = 0; i < materials.length ; i++){
             ItemStack item = new ItemStack(materials[i]);
             ItemMeta itemMeta = item.getItemMeta();
-            itemMeta.setDisplayName(" ");
+            if (itemMeta != null)
+                itemMeta.setDisplayName(" ");
             item.setItemMeta(itemMeta);
             items[i] = item;
         }

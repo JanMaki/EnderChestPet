@@ -43,6 +43,10 @@ public class ClickEnderChestListener implements Listener {
         if (itemStack.getType() != material) {
             return;
         }
+        if (!player.hasPermission("ecp.create") && !player.hasPermission("ecp.*")) {
+            player.sendMessage(ChatColor.RED+"Insufficient perm. [ ecp.create ]");
+            return;
+        }
         event.setCancelled(true);
         if (enderChestPet.core.getWolf(player) != null){
             player.sendMessage(ChatColor.RED+"You already have a pet!");

@@ -3,6 +3,7 @@ package site.jnmk.janmaki.ender_chest_pet;
 import net.minecraft.server.v1_14_R1.PacketPlayOutEntityDestroy;
 import org.bukkit.*;
 import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.craftbukkit.v1_14_R1.entity.CraftPlayer;
 import org.bukkit.entity.*;
 import org.bukkit.inventory.Inventory;
@@ -48,7 +49,9 @@ public class PetCore {
             return;
         }
         Wolf wolf = (Wolf) world.spawnEntity(location,EntityType.WOLF);
-        wolf.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(0.5);
+        AttributeInstance instance = wolf.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED);
+        if (instance != null)
+            instance.setBaseValue(0.5);
         wolf.setSilent(true);
         wolf.setOwner(owner);
         wolf.setCustomName(("p:"+owner.getName()));

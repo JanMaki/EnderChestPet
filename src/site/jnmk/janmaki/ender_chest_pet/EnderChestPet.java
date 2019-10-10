@@ -11,6 +11,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import site.jnmk.janmaki.ender_chest_pet.listener.*;
 
+import javax.annotation.Nonnull;
+
 public class EnderChestPet extends JavaPlugin {
 
     public FileConfiguration config;
@@ -30,7 +32,7 @@ public class EnderChestPet extends JavaPlugin {
     }
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+    public boolean onCommand(@Nonnull CommandSender sender,@Nonnull Command command,@Nonnull String label,@Nonnull String[] args) {
         if (!(sender instanceof Player)){
             sender.sendMessage(ChatColor.RED+"Player only command.");
             return true;
